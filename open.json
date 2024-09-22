@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "rules": [
+      {
+        "domain_suffix": [
+          "mypikpak.com",
+          "api.telegram.org",
+          "docker.io",
+          "docker.com",
+          "registry.hub.docker.com",
+          "fsm.name"
+        ]
+      }
+    ]
+}
