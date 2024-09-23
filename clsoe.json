@@ -30,7 +30,12 @@
           "0ff.cc",
           "cinefiles.info",
           "hhan.top",
-          "fsm-us.eu.org"
+          "fsm-us.eu.org",
+          "api.steampowered.com",
+          "steamcommunity.com",
+          "store.steampowered.com",
+          "shared.steamstatic.com",
+          "cdn.steamstatic.com"
         ]
       }
     ]
