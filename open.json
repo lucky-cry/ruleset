@@ -2,7 +2,7 @@
     "version": 1,
     "rules": [
       {
-        "domain": [
+        "domain_suffix": [
             "mypikpak.com",
             "api.telegram.org",
             "docker.io",
@@ -10,16 +10,6 @@
             "registry.hub.docker.com",
             "fsm.name",
             "steamcommunity.com"
-        ]
-      },{
-        "domain_suffix": [
-            ".mypikpak.com",
-            ".api.telegram.org",
-            ".docker.io",
-            ".docker.com",
-            ".registry.hub.docker.com",
-            ".fsm.name",
-            ".steamcommunity.com"
         ]
       }
     ]
