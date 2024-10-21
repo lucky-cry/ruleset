@@ -1,0 +1,8 @@
+payload:
+  - DOMAIN-SUFFIX,mypikpak.com
+  - DOMAIN-SUFFIX,api.telegram.org
+  - DOMAIN-SUFFIX,docker.io
+  - DOMAIN-SUFFIX,docker.com
+  - DOMAIN-SUFFIX,registry.hub.docker.com
+  - DOMAIN-SUFFIX,fsm.name
+  - DOMAIN-SUFFIX,steamcommunity.com
