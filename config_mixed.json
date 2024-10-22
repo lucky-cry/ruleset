@@ -107,7 +107,7 @@
       { "ip_is_private": true, "outbound": "🎯 全球直连" },
       { "rule_set": "geosite-openai", "outbound": "🤖 OpenAI" },
       { "rule_set": "geosite-open", "outbound": "🚀 节点选择" },
-      { "rule_set": "geosite-close", "outbound": "🎯 全球直连" }
+      { "rule_set": "geosite-close", "outbound": "🎯 全球直连" },
       { "rule_set": "geosite-youtube", "outbound": "📹 YouTube" },
       { "rule_set": "geosite-disney", "outbound": "📺 Disney" },
       { "rule_set": ["geoip-google", "geosite-google"], "outbound": "🍀 Google" },
