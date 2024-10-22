@@ -9,7 +9,7 @@ payload:
   - DOMAIN-SUFFIX,hdtime.org
   - DOMAIN-SUFFIX,ptchina.org
   - DOMAIN-SUFFIX,pt.0ff.c
-  - DOMAIN-SUFFIX,ubits.clu
+  - DOMAIN-SUFFIX,ubits.club
   - DOMAIN-SUFFIX,oshen.win
   - DOMAIN-SUFFIX,nicept.net
   - DOMAIN-SUFFIX,hdatmos.club
@@ -27,3 +27,9 @@ payload:
   - DOMAIN-SUFFIX,cinefiles.info
   - DOMAIN-SUFFIX,hhan.top
   - DOMAIN-SUFFIX,fsm-us.eu.org
+  - DOMAIN-KEYWORD,steampowered
+  - DOMAIN-KEYWORD,steamstatic
+  - DOMAIN-KEYWORD,steamtools
+  - DOMAIN-KEYWORD,steamserver
+  - DOMAIN-KEYWORD,steamcommunity
+  - DOMAIN-KEYWORD,steamuserimages
