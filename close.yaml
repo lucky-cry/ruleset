@@ -27,9 +27,5 @@ payload:
   - DOMAIN-SUFFIX,cinefiles.info
   - DOMAIN-SUFFIX,hhan.top
   - DOMAIN-SUFFIX,fsm-us.eu.org
-  - DOMAIN-KEYWORD,steampowered
-  - DOMAIN-KEYWORD,steamstatic
-  - DOMAIN-KEYWORD,steamtools
-  - DOMAIN-KEYWORD,steamserver
-  - DOMAIN-KEYWORD,steamcommunity
-  - DOMAIN-KEYWORD,steamuserimages
+  - DOMAIN-SUFFIX,czhch.com
+  - DOMAIN-SUFFIX,icc2022.xyz
