@@ -4,7 +4,6 @@
       {
         "domain_suffix": [
             "mypikpak.com",
-            "api.telegram.org",
             "docker.io",
             "docker.com",
             "registry.hub.docker.com",
