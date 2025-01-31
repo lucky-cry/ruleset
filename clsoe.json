@@ -39,7 +39,8 @@
                 "shared.steamstatic.com",
                 "cdn.steamstatic.com",
                 "steamtools.net",
-                "steamserver"
+                "steamserver",
+                "testipv6.cn"
             ]
         },
         {
