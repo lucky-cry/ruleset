@@ -732,13 +732,6 @@
                 "download_detour": "🎯 全球直连"
             },
             {
-                "tag": "geosite-github",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/github.srs",
-                "download_detour": "🎯 全球直连"
-            },
-            {
                 "tag": "geoip-telegram",
                 "type": "remote",
                 "format": "binary",
