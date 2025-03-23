@@ -347,6 +347,14 @@
             ]
         },
         {
+            "tag": "🚫 AdBlock",
+            "type": "selector",
+            "outbounds": [
+                "block",
+                "direct"
+            ]
+        },
+        {
             "tag": "🇭🇰 香港节点",
             "type": "selector",
             "outbounds": [
@@ -568,6 +576,10 @@
         {
             "tag": "dns-out",
             "type": "dns"
+        },
+        {
+            "type": "block",
+            "tag": "block"
         }
     ],
     "route": {
@@ -586,6 +598,10 @@
                     }
                 ],
                 "outbound": "dns-out"
+            },
+            {
+                "rule_set": "geosite-category-ads-all",
+                "outbound": "🚫 AdBlock"
             },
             {
                 "clash_mode": "direct",
@@ -689,6 +705,13 @@
             }
         ],
         "rule_set": [
+            {
+                "tag": "geosite-category-ads-all",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs",
+                "download_detour": "🎯 全球直连"
+            },
             {
                 "tag": "geosite-private",
                 "type": "remote",
