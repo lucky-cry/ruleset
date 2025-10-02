@@ -717,14 +717,14 @@
                 "tag": "geosite-steam",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/steam.srs",
+                "url": "https://testingcf.jsdelivr.net/gh/lucky-cry/sing-box-geosite@main/rule/Steam.srs"，
                 "download_detour": "🎯 全球直连"
             },
             {
                 "tag": "geosite-steamcn",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/steam@cn.srs",
+                "url": "https://testingcf.jsdelivr.net/gh/lucky-cry/sing-box-geosite@main/rule/SteamCN.srs",
                 "download_detour": "🎯 全球直连"
             },
             {
