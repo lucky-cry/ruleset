@@ -5,3 +5,4 @@ payload:
   - DOMAIN-SUFFIX,registry.hub.docker.com
   - DOMAIN-SUFFIX,fsm.name
   - DOMAIN-SUFFIX,steamcommunity.com
+  - DOMAIN-SUFFIX,nexus-cdn.com
