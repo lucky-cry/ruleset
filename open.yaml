@@ -6,3 +6,4 @@ payload:
   - DOMAIN-SUFFIX,fsm.name
   - DOMAIN-SUFFIX,steamcommunity.com
   - DOMAIN-SUFFIX,nexus-cdn.com
+  - DOMAIN-SUFFIX,manifest.steam.run
