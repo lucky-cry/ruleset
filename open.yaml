@@ -2,6 +2,7 @@ payload:
   - DOMAIN,d1q6f0aelx0por.cloudfront.net
   - DOMAIN,d2wy8f7a9ursnm.cloudfront.net
   - DOMAIN,d36jcksde1wxzq.cloudfront.net
+  - DOMAIN,api.themoviedb.org
   - DOMAIN-SUFFIX,compose-spec.io
   - DOMAIN-SUFFIX,dockerhub.com
   - DOMAIN-SUFFIX,mypikpak.com
@@ -12,4 +13,4 @@ payload:
   - DOMAIN-SUFFIX,steamcommunity.com
   - DOMAIN-SUFFIX,nexus-cdn.com
   - DOMAIN-SUFFIX,manifest.steam.run
-  - DOMAIN-SUFFIX, api.themoviedb.org
+  - DOMAIN-SUFFIX,themoviedb.org
