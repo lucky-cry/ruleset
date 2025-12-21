@@ -12,3 +12,4 @@ payload:
   - DOMAIN-SUFFIX,steamcommunity.com
   - DOMAIN-SUFFIX,nexus-cdn.com
   - DOMAIN-SUFFIX,manifest.steam.run
+  - DOMAIN-SUFFIX, api.themoviedb.org
