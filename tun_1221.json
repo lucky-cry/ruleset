@@ -16,9 +16,6 @@
   },
 
   "dns": {
-    "strategy": "prefer_ipv4",
-    "independent_cache": true,
-
     "servers": [
       {
         "tag": "localDns",
@@ -31,15 +28,10 @@
         "detour": "🚀 节点选择"
       },
       {
-        "tag": "fakeip",
-        "address": "fakeip"
-      },
-      {
-        "tag": "block",
+        "tag": "blockDns",
         "address": "rcode://success"
       }
     ],
-
     "rules": [
       {
         "rule_set": "geosite-cn",
@@ -47,16 +39,20 @@
       },
       {
         "rule_set": "geosite-geolocation-!cn",
-        "server": "fakeip"
+        "server": "proxyDns"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "server": "blockDns"
       }
     ],
-
     "fakeip": {
       "enabled": true,
       "inet4_range": "198.18.0.0/15",
       "inet6_range": "fc00::/18"
     },
-
+    "strategy": "prefer_ipv4",
+    "independent_cache": true,
     "final": "localDns"
   },
 
@@ -258,16 +254,12 @@
       "outbounds": ["{all}"]
     },
     {
-      "tag": "🛑 广告域名",
-      "type": "block"
-    },
-    {
       "tag": "🎯 全球直连",
       "type": "direct"
     },
     {
       "tag": "dns-out",
-      "type": "dns"
+      "type": "direct"
     }
   ],
 
@@ -282,7 +274,7 @@
       },
       {
         "rule_set": "geosite-category-ads-all",
-        "outbound": "🛑 广告域名"
+        "action": "reject"
       },
       {
         "rule_set": ["geosite-private", "geoip-private"],
