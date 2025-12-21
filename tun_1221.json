@@ -47,12 +47,7 @@
       },
       {
         "rule_set": "geosite-geolocation-!cn",
-        "query_type": ["A", "AAAA"],
         "server": "fakeip"
-      },
-      {
-        "rule_set": "geosite-geolocation-!cn",
-        "server": "proxyDns"
       }
     ],
 
@@ -74,7 +69,7 @@
       "strict_route": true,
       "sniff": true,
       "endpoint_independent_nat": false,
-      "stack": "system",
+      "stack": "gvisor",
       "platform": {
         "http_proxy": {
           "enabled": true,
@@ -107,7 +102,6 @@
         "🎯 全球直连"
       ]
     },
-
     {
       "tag": "♻️ 自动选择",
       "type": "urltest",
@@ -115,14 +109,16 @@
       "filter": [
         {
           "action": "exclude",
-          "keywords": ["网站|地址|剩余|过期|时间|有效|到期"]
+          "keywords": [
+            "网站", "地址", "剩余", "过期", "时间", "有效", "到期",
+            "block", "dns-out", "直连", "广告", "🛑", "🎯", "dns"
+          ]
         }
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
       "tolerance": 50
     },
-
     {
       "tag": "🤖 OpenAI",
       "type": "selector",
@@ -138,7 +134,6 @@
         "🐸 手动切换"
       ]
     },
-
     {
       "tag": "📲 Telegram",
       "type": "selector",
@@ -154,7 +149,6 @@
         "🐸 手动切换"
       ]
     },
-
     {
       "tag": "🎮 Steam",
       "type": "selector",
@@ -168,7 +162,6 @@
         "🐸 手动切换"
       ]
     },
-
     {
       "tag": "🎮 SteamCN",
       "type": "selector",
@@ -178,7 +171,6 @@
         "🐸 手动切换"
       ]
     },
-
     {
       "tag": "👨‍💻 Github",
       "type": "selector",
@@ -188,7 +180,6 @@
         "🐸 手动切换"
       ]
     },
-
     {
       "tag": "📹 YouTube",
       "type": "selector",
@@ -198,7 +189,6 @@
         "🐸 手动切换"
       ]
     },
-
     {
       "tag": "🐬 OneDrive",
       "type": "selector",
@@ -208,7 +198,6 @@
         "🐸 手动切换"
       ]
     },
-
     {
       "tag": "📻 Microsoft",
       "type": "selector",
@@ -218,7 +207,6 @@
         "🐸 手动切换"
       ]
     },
-
     {
       "tag": "🍀 Google",
       "type": "selector",
@@ -228,7 +216,6 @@
         "🐸 手动切换"
       ]
     },
-
     {
       "tag": "🎵 TikTok",
       "type": "selector",
@@ -238,7 +225,6 @@
         "🐸 手动切换"
       ]
     },
-
     {
       "tag": "🍏 Apple",
       "type": "selector",
@@ -248,7 +234,6 @@
         "🐸 手动切换"
       ]
     },
-
     {
       "tag": "🎥 Netflix",
       "type": "selector",
@@ -258,7 +243,6 @@
         "🐸 手动切换"
       ]
     },
-
     {
       "tag": "🐟 漏网之鱼",
       "type": "selector",
@@ -268,13 +252,11 @@
         "🐸 手动切换"
       ]
     },
-
     {
       "tag": "🐸 手动切换",
       "type": "selector",
       "outbounds": ["{all}"]
     },
-
     {
       "tag": "🛑 广告域名",
       "type": "block"
