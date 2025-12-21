@@ -3,7 +3,6 @@
     "level": "info",
     "timestamp": true
   },
-
   "experimental": {
     "clash_api": {
       "external_controller": "0.0.0.0:9090",
@@ -14,8 +13,9 @@
       "default_mode": "rule"
     }
   },
-
   "dns": {
+    "strategy": "prefer_ipv4",
+    "independent_cache": true,
     "servers": [
       {
         "tag": "localDns",
@@ -28,7 +28,11 @@
         "detour": "🚀 节点选择"
       },
       {
-        "tag": "blockDns",
+        "tag": "fakeip",
+        "address": "fakeip"
+      },
+      {
+        "tag": "block",
         "address": "rcode://success"
       }
     ],
@@ -39,11 +43,7 @@
       },
       {
         "rule_set": "geosite-geolocation-!cn",
-        "server": "proxyDns"
-      },
-      {
-        "rule_set": "geosite-category-ads-all",
-        "server": "blockDns"
+        "server": "fakeip"
       }
     ],
     "fakeip": {
@@ -51,11 +51,8 @@
       "inet4_range": "198.18.0.0/15",
       "inet6_range": "fc00::/18"
     },
-    "strategy": "prefer_ipv4",
-    "independent_cache": true,
     "final": "localDns"
   },
-
   "inbounds": [
     {
       "type": "tun",
@@ -81,7 +78,6 @@
       "sniff": true
     }
   ],
-
   "outbounds": [
     {
       "tag": "🚀 节点选择",
@@ -101,15 +97,10 @@
     {
       "tag": "♻️ 自动选择",
       "type": "urltest",
-      "outbounds": ["{all}"],
-      "filter": [
-        {
-          "action": "exclude",
-          "keywords": [
-            "网站", "地址", "剩余", "过期", "时间", "有效", "到期",
-            "block", "dns-out", "直连", "广告", "🛑", "🎯", "dns"
-          ]
-        }
+      "outbounds": [
+        "🇯🇵 日本节点",
+        "🇺🇲 美国节点",
+        "🇹🇼 台湾节点"
       ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
@@ -251,7 +242,18 @@
     {
       "tag": "🐸 手动切换",
       "type": "selector",
-      "outbounds": ["{all}"]
+      "outbounds": [
+        "🇯🇵 日本节点",
+        "🇺🇲 美国节点",
+        "🇹🇼 台湾节点",
+        "🇹🇼 台湾自动",
+        "🇯🇵 日本自动",
+        "🇺🇸 美国自动"
+      ]
+    },
+    {
+      "tag": "🛑 广告域名",
+      "type": "block"
     },
     {
       "tag": "🎯 全球直连",
@@ -259,14 +261,12 @@
     },
     {
       "tag": "dns-out",
-      "type": "direct"
+      "type": "dns"
     }
   ],
-
   "route": {
     "auto_detect_interface": true,
     "final": "🐟 漏网之鱼",
-
     "rules": [
       {
         "protocol": "dns",
@@ -274,7 +274,7 @@
       },
       {
         "rule_set": "geosite-category-ads-all",
-        "action": "reject"
+        "outbound": "🛑 广告域名"
       },
       {
         "rule_set": ["geosite-private", "geoip-private"],
@@ -345,7 +345,6 @@
         "outbound": "🎯 全球直连"
       }
     ],
-
     "rule_set": [
       {
         "tag": "geosite-category-ads-all",
