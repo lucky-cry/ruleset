@@ -14,3 +14,4 @@ payload:
   - DOMAIN-SUFFIX,nexus-cdn.com
   - DOMAIN-SUFFIX,manifest.steam.run
   - DOMAIN-SUFFIX,themoviedb.org
+  - DOMAIN-SUFFIX,subtitlecat.com
